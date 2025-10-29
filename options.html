@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ScamShield Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        textarea,
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 6px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 12px;
+            display: block;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-top: 8px;
+        }
+
+        .small {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ScamShield — Options</h1>
+
+    <label>Blocked domains (one per line)</label>
+    <textarea id="blockedDomains" rows="5" placeholder="malicious.example"></textarea>
+
+    <label>Keywords to flag (one per line)</label>
+    <textarea id="keywords" rows="4" placeholder="login"></textarea>
+
+    <label>Whitelist domains (one per line)</label>
+    <textarea id="whitelist" rows="4" placeholder="trusted.example"></textarea>
+
+    <label>Suspicious TLDs (one per line)</label>
+    <textarea id="suspiciousTLDs" rows="2" placeholder="tk"></textarea>
+
+    <div style="margin-top:12px;">
+        <button id="save">Save</button>
+        <button id="reset">Reset to defaults</button>
+        <span id="status" class="small"></span>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
